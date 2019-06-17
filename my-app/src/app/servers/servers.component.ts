@@ -11,6 +11,7 @@ allowNewServer = false;
 serverCreationStatus = 'No Server created';
 serverName = 'test';
 serverCreated = false;
+servers =[ 'Testserver', 'TestServer2']
   constructor() {
     setTimeout(() =>{
       this.allowNewServer = true;
@@ -22,6 +23,7 @@ serverCreated = false;
 
   onCreateServer(){
     this.serverCreated = true;
+    this.servers.push(this.serverName);
     this.serverCreationStatus = 'server was created' + this.serverName;
   }
   onUpdateServerName(event: Event){
